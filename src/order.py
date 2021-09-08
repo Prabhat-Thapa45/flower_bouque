@@ -2,7 +2,7 @@ from src.constants import STOCK_DICT
 from src.message import message_dict
 
 
-# this method takes order amount
+# takes order amount
 def place_order():
     amount_to_reduce_dict = {}
     for flower in STOCK_DICT.keys():
@@ -18,3 +18,10 @@ def place_order():
                 amount_to_reduce_dict[flower] = amount
                 break
     return amount_to_reduce_dict
+
+
+# prints order details
+def order_details(order_amount_dict):
+    for flower, quantity in order_amount_dict.items():
+        print(f"{flower}: {quantity}", end=" ")
+    print("\n")

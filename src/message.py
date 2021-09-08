@@ -4,6 +4,6 @@ message_dict = {
     "amount": "Enter amount for",
     "shortage_error": "We don't have enough stock. Please go below",
     "response": "Do you want to order again?(y/n)",
-    "success": "Your order has been placed successfully"
+    "success_order_details": "Your order has been placed successfully \nYour order items is mentioned below"
 }
 
