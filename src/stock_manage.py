@@ -1,18 +1,19 @@
-from src.constants import stock_dict, add_stock_amount
-from src.order import place_order
+from src.constants import STOCK_DICT, ADD_STOCK_AMOUNT
 
 
+# adds the stock if the flower is below the threshold amount
 def add_stock(flower):
-    stock_dict[flower] += add_stock_amount
+    STOCK_DICT[flower] += ADD_STOCK_AMOUNT
 
 
+# updates the stocks after each order
 def update_stock(amount_to_reduce_dict):
     for flower, quantity in amount_to_reduce_dict.items():
-        stock_dict[flower] -= quantity
+        STOCK_DICT[flower] -= quantity
 
 
+# check stock and calls add_stock() method if stock is below threshold amount
 def check_stock():
-    for flower, quantity in stock_dict.items():
-        if stock_dict[flower] <= 30:
-            print(stock_dict[flower])
+    for flower, quantity in STOCK_DICT.items():
+        if STOCK_DICT[flower] <= 30:
             add_stock(flower)
